@@ -197,6 +197,7 @@
 				840AF66120A57F4300325E7F /* Sources */,
 				840AF66220A57F4300325E7F /* Frameworks */,
 				840AF66320A57F4300325E7F /* Resources */,
+				848B030B21393890008CC086 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -253,6 +254,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		848B030B21393890008CC086 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION == Debug ]; then\n\nframeworkPath=${TARGET_BUILD_DIR}/${CONTENTS_FOLDER_PATH}/Frameworks\n\n#echo \"123---\"$frameworkPath\n\ncp -R ${PROJECT_DIR}/ThirdParty/MLeaksFinder/MLeaksFinder.framework $frameworkPath\ncp -R ${PROJECT_DIR}/ThirdParty/MLeaksFinder/FBRetainCycleDetector.framework $frameworkPath\n\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		840AF66120A57F4300325E7F /* Sources */ = {

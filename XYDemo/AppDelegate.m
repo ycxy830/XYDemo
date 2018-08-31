@@ -8,6 +8,10 @@
 
 #import "AppDelegate.h"
 
+#ifdef DEBUG
+#include <dlfcn.h>
+#endif//DEBUG
+
 //Other Linker Flags -force_load ./XYDemo/Libs/libCustomControlLibrary.a
 
 @interface AppDelegate ()
@@ -18,6 +22,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+#ifdef DEBUG
+    NSString *bundlePath = [NSBundle mainBundle].bundlePath;
+    NSString *frameworkPath = [bundlePath stringByAppendingString:@"/Frameworks/MLeaksFinder.framework/MLeaksFinder"];
+    const char *path = [frameworkPath UTF8String];
+    void *kit = dlopen(path, RTLD_LAZY);
+    if(kit)
+    {
+    }
+    dlclose(kit);
+#endif//DEBUG
+
     // Override point for customization after application launch.
     UINavigationController *navigationController = self.window.rootViewController.navigationController;
     if(!navigationController)

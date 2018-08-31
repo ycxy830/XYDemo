@@ -1,0 +1,6 @@
+framework module MLeaksFinder {
+  umbrella header "MLeaksFinder.h"
+
+  export *
+  module * { export * }
+}
