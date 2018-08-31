@@ -25,6 +25,9 @@
 		8447BFFC2138E74E003517F4 /* CustomControlLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447BFF92138E74E003517F4 /* CustomControlLibrary.m */; };
 		8447BFFD2138E74E003517F4 /* XYGlobalFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447BFFB2138E74E003517F4 /* XYGlobalFunctions.m */; };
 		8447C0002138E838003517F4 /* CustomControlDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447BFFE2138E837003517F4 /* CustomControlDefine.m */; };
+		8447C0032139102F003517F4 /* ContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447C0012139102F003517F4 /* ContentViewController.m */; };
+		8447C00621392493003517F4 /* FlipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447C00521392493003517F4 /* FlipView.m */; };
+		8447C00921392624003517F4 /* UIView+RoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 8447C00721392623003517F4 /* UIView+RoundCorner.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,12 @@
 		8447BFFB2138E74E003517F4 /* XYGlobalFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XYGlobalFunctions.m; sourceTree = "<group>"; };
 		8447BFFE2138E837003517F4 /* CustomControlDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomControlDefine.m; sourceTree = "<group>"; };
 		8447BFFF2138E837003517F4 /* CustomControlDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomControlDefine.h; sourceTree = "<group>"; };
+		8447C0012139102F003517F4 /* ContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContentViewController.m; sourceTree = "<group>"; };
+		8447C0022139102F003517F4 /* ContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContentViewController.h; sourceTree = "<group>"; };
+		8447C00421392493003517F4 /* FlipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlipView.h; sourceTree = "<group>"; };
+		8447C00521392493003517F4 /* FlipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlipView.m; sourceTree = "<group>"; };
+		8447C00721392623003517F4 /* UIView+RoundCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+RoundCorner.m"; sourceTree = "<group>"; };
+		8447C00821392624003517F4 /* UIView+RoundCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+RoundCorner.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +113,8 @@
 				840AF66920A57F4300325E7F /* AppDelegate.m */,
 				840AF66B20A57F4300325E7F /* ViewController.h */,
 				840AF66C20A57F4300325E7F /* ViewController.m */,
+				8447C0022139102F003517F4 /* ContentViewController.h */,
+				8447C0012139102F003517F4 /* ContentViewController.m */,
 				840AF66E20A57F4300325E7F /* Main.storyboard */,
 				840AF67120A57F4E00325E7F /* Assets.xcassets */,
 				840AF67320A57F4E00325E7F /* LaunchScreen.storyboard */,
@@ -132,16 +143,20 @@
 		8447BFD22138DDB1003517F4 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				8447BFDC2138DF87003517F4 /* CarouselView.h */,
-				8447BFDB2138DF87003517F4 /* CarouselView.m */,
-				8447BFDA2138DF87003517F4 /* ShapeView.h */,
-				8447BFD92138DF87003517F4 /* ShapeView.m */,
-				8447BFDE2138DF87003517F4 /* UIView+Folding.h */,
-				8447BFDD2138DF87003517F4 /* UIView+Folding.m */,
+				8447C00421392493003517F4 /* FlipView.h */,
+				8447C00521392493003517F4 /* FlipView.m */,
 				8447BFD32138DDB1003517F4 /* CubeView.h */,
 				8447BFD42138DDB1003517F4 /* CubeView.m */,
+				8447BFDA2138DF87003517F4 /* ShapeView.h */,
+				8447BFD92138DF87003517F4 /* ShapeView.m */,
+				8447BFDC2138DF87003517F4 /* CarouselView.h */,
+				8447BFDB2138DF87003517F4 /* CarouselView.m */,
 				8447BFD52138DDB1003517F4 /* XYChartView.h */,
 				8447BFD62138DDB1003517F4 /* XYChartView.m */,
+				8447BFDE2138DF87003517F4 /* UIView+Folding.h */,
+				8447BFDD2138DF87003517F4 /* UIView+Folding.m */,
+				8447C00821392624003517F4 /* UIView+RoundCorner.h */,
+				8447C00721392623003517F4 /* UIView+RoundCorner.m */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -247,6 +262,7 @@
 				8447BFF32138E206003517F4 /* math3D.cpp in Sources */,
 				8447BFF12138E1F9003517F4 /* mathc.m in Sources */,
 				8447BFFC2138E74E003517F4 /* CustomControlLibrary.m in Sources */,
+				8447C00921392624003517F4 /* UIView+RoundCorner.m in Sources */,
 				840AF66D20A57F4300325E7F /* ViewController.m in Sources */,
 				840AF67820A57F4E00325E7F /* main.m in Sources */,
 				8447C0002138E838003517F4 /* CustomControlDefine.m in Sources */,
@@ -255,6 +271,8 @@
 				8447BFD72138DDB1003517F4 /* CubeView.m in Sources */,
 				8447BFFD2138E74E003517F4 /* XYGlobalFunctions.m in Sources */,
 				8447BFDF2138DF87003517F4 /* ShapeView.m in Sources */,
+				8447C00621392493003517F4 /* FlipView.m in Sources */,
+				8447C0032139102F003517F4 /* ContentViewController.m in Sources */,
 				8447BFD82138DDB1003517F4 /* XYChartView.m in Sources */,
 				8447BFE02138DF87003517F4 /* CarouselView.m in Sources */,
 				8447BFF62138E240003517F4 /* JHKeyframeAnimationFunctions.c in Sources */,
